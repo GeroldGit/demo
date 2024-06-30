@@ -33,7 +33,7 @@ public class StudentController {
                 .orElseGet(() -> ResponseEntity.notFound().build());
     }
 
-    @PostMapping
+    @PostMapping("/create")
     public Student createStudent(@RequestBody Student student) {
         logger.info("Creating new student: {}", student);
         return studentService.createStudent(student);
